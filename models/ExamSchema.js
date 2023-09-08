@@ -1,15 +1,11 @@
 const mongoose = require("mongoose");
 
 const ExamSchema = new mongoose.Schema({
-  image: {
+  text: {
     type: String,
     required: true,
   },
-  title: {
-    type: String,
-    required: true,
-  },
-  description: {
+  link: {
     type: String,
     required: true,
   },

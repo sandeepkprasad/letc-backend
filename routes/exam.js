@@ -12,13 +12,12 @@ router.get("/allexams", async (req, res) => {
 });
 
 router.post("/addexam", async (req, res) => {
-  const { image, title, description } = req.body;
+  const { text, link } = req.body;
 
   try {
     const data = new ExamSchema({
-      image,
-      title,
-      description,
+      text,
+      link,
     });
 
     const saveExam = await data.save();
